@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ro-Shammmmmm-Bo!</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+    /* ----- title section ----- */
+      header {
+        height: 20vh;
+        width: 30vw;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #heading {
+        margin-top: 0;
+        text-align: center;
+      }
+
+      .top-image {
+        width: 15vw;
+        margin-top: 2px;
+      }
+      #ro {
+        font-family: 'Lobster', cursive;
+      }
+      #sham {
+        font-family: 'Clicker Script', cursive;
+      }
+      #bo {
+        font-family: 'Sigmar One', cursive;
+      }
+      /* ----- user choice section ----- */
+      main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        background-color: #E7E9E9;
+      }
+
+      .choice {
+        /* border: 1px solid #989898;*/
+        background-color: #D3D3D3;
+        width: 10vw;
+        overflow: visible;
+      }
+
+      .pick {
+        margin: 2.5%;
+        opacity: 1;
+        border: 3px solid #1DA4B9;
+        height: 25vh;
+        border-radius: 3%;
+      }
+
+      /* ----- results section ----- */
+      section.outcomes {
+        height: 30vh;
+        display: flex;
+        background-color:#000;
+        flex-direction: row;
+        justify-content: center;
+        /*align-items: center;*/
+      }
+
+      .reader {
+        font-family: 'Slabo 27px', sans-serif;
+        color: white;
+        text-align: left;
+        line-height: 1.5;
+        width: 25vw;
+        margin: 1% 2% 0 0;
+      }
+
+      .hidden {
+        visibility: hidden;
+      }
+
+      .results {
+        color:#FFF;
+        width: 20vw;
+        margin: 2%;
+        font-family: 'Slabo 27px', serif;
+        text-align: center;
+        line-height: .6;
+      }
+      .score {
+        margin: 0;
+        font-size: 65px;
+      }
+
+      .winbox {
+        display: inline-block;
+        padding: 0 .5em 0 .5em;
+      }
+
+      .losebox {
+        display: inline-block;
+        padding: 0 .5em 0 .5em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img class="top-image" src="http://res.cloudinary.com/drbu9pvxt/image/upload/v1489108264/RoShamBo/ro-sham-bo_q5kuaf.png" alt="rock paper scissors image" />
+      <h1 id="heading">
+        <span id="ro">Ro </span><span id="sham">Sham </span><span id="bo">Bo!</span>
+      </h1>
+    </header>
+    <main>
+        <img id="rock" class="pick" src="http://res.cloudinary.com/drbu9pvxt/image/upload/v1489108179/RoShamBo/blue-rock_czfgz5.png" name="rock" alt="rock" />
+        <img id="paper" class="pick" src="http://res.cloudinary.com/drbu9pvxt/image/upload/v1489108162/RoShamBo/blue-paper_qlvjn4.png" name="paper" alt="paper" />
+        <img id="scissors" class="pick" src="http://res.cloudinary.com/drbu9pvxt/image/upload/v1489108194/RoShamBo/blue-scissors_tgtlbl.png" name="scissors" alt="scissors" />
+    </main>
+    <section class="outcomes">
+      <div class="reader">
+        <h2 class="reader-text">What'll it be?</h2>
+        <h2 id="outcomeText"></h2>
+      </div>
+      <img id="throw" class="hidden" src="http://res.cloudinary.com/drbu9pvxt/image/upload/v1489108227/RoShamBo/rock_xjk2zx.png" alt="one-two-three-shoot" />
+      <div class="results">
+        <div class="winbox">
+          <h2 id='winHighlight'>WINS</h2>
+          <h1 class="score wins" id="winScore">0</span>
+        </div>
+        <div class="losebox">
+          <h2 id='lossHighlight'>LOSSES</h2>
+          <h1 class="score losses" id="lossScore">0</span>
+        </div>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
