@@ -110,6 +110,59 @@
         display: inline-block;
         padding: 0 .5em 0 .5em;
       }
+
+      .tada {
+        -webkit-animation-name: tada;
+        animation-name: tada;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        }
+        @-webkit-keyframes tada {
+        0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        }
+        10%, 20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        }
+        30%, 50%, 70%, 90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        }
+        40%, 60%, 80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        }
+        100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        }
+        }
+        @keyframes tada {
+        0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        }
+        10%, 20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        }
+        30%, 50%, 70%, 90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        }
+        40%, 60%, 80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        }
+        100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        }
+        }
     </style>
   </head>
   <body>
@@ -120,9 +173,9 @@
       </h1>
     </header>
     <main>
-        <img id="rock" class="pick" src="http://res.cloudinary.com/drbu9pvxt/image/upload/v1489108179/RoShamBo/blue-rock_czfgz5.png" name="rock" alt="rock" />
-        <img id="paper" class="pick" src="http://res.cloudinary.com/drbu9pvxt/image/upload/v1489108162/RoShamBo/blue-paper_qlvjn4.png" name="paper" alt="paper" />
-        <img id="scissors" class="pick" src="http://res.cloudinary.com/drbu9pvxt/image/upload/v1489108194/RoShamBo/blue-scissors_tgtlbl.png" name="scissors" alt="scissors" />
+        <img id="rock" class="pick" onclick="ani('rock');" src="http://res.cloudinary.com/drbu9pvxt/image/upload/v1489108179/RoShamBo/blue-rock_czfgz5.png" name="rock" alt="rock" />
+        <img id="paper" class="pick" onclick="ani('paper');" src="http://res.cloudinary.com/drbu9pvxt/image/upload/v1489108162/RoShamBo/blue-paper_qlvjn4.png" name="paper" alt="paper" />
+        <img id="scissors" class="pick" onclick="ani('scissors')" src="http://res.cloudinary.com/drbu9pvxt/image/upload/v1489108194/RoShamBo/blue-scissors_tgtlbl.png" name="scissors" alt="scissors" />
     </main>
     <section class="outcomes">
       <div class="reader">

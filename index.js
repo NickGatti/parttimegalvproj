@@ -124,5 +124,12 @@ function reset(){
     document.getElementById('winScore').style.color = 'white'
     document.getElementById('winHighlight').style.color = 'white'
     document.getElementById('lossHighlight').style.color = 'white'
-  }, 2000)
+  }, 1500)
+}
+
+function ani(selector) {
+  document.getElementById(selector).className  = 'tada'
+  setTimeout(function() {
+    document.getElementById(selector).className  = 'pick'
+  } , 1000)
 }
